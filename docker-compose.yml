@@ -39,18 +39,6 @@ services:
     networks:
       - app-network    
 
-      
-
-volumes:
-  mysql:
-  wordpress:
-
-
-networks:
-  app-network:
-    driver: bridge
-
-
 # Trường hợp tạo db trên docker
 
   # db:
@@ -65,4 +53,15 @@ networks:
   #   ports:
   #     - "9091:3306"  
   #   volumes:
-  #     - mysql:/var/lib/mysql    
+  #     - mysql:/var/lib/mysql          
+
+volumes:
+  mysql:
+  wordpress:
+
+
+networks:
+  app-network:
+    driver: bridge
+
+
