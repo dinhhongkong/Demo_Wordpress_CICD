@@ -24,7 +24,7 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-            
+
       - name: Debug Docker username
         run: echo ${{ secrets.DOCKER_USERNAME }}
 
@@ -40,7 +40,7 @@ jobs:
         with:
           context: ./wordpress
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/wordpress:latest
+          tags: dinhhongkong/wordpress:latest
 
       - name: Set up environment variables
         run: |
